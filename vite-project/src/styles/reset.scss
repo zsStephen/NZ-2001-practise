@@ -1,0 +1,25 @@
+/* 清除所有元素默认的内外边距 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 列表去掉圆点 */
+ul, ol {
+  list-style: none;
+}
+/* 链接去掉下划线、颜色继承 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 图片不产生底部空隙 */
+img {
+  display: block;
+  max-width: 100%;
+}
+/* 输入框字体继承 */
+input, button, textarea {
+  font: inherit;
+}

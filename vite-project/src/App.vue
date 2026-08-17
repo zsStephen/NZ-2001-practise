@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <h1>HELLO VUE3</h1>
     <el-button type="primary" :icon="Edit">Waring</el-button>
     <el-button type="danger" :icon="Delete" circle />
@@ -11,10 +11,10 @@
       :total="400"
 
     />
-    <svg>
+    <!-- <svg>
       <use xlink:href="#icon-watermelon"></use>
-    </svg>
-    <!-- <SvgIcon name="watermelon"/> -->
+    </svg> -->
+    <SvgIcon name="watermelon"/>
   </div>
 </template>
 
@@ -24,5 +24,10 @@ import SvgIcon from "./components/SvgIcon.vue";
 console.log(import.meta.env)
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  div{
+    h1{
+      color:$primary-color
+    }
+  }
 </style>

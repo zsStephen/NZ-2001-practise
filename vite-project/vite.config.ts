@@ -14,6 +14,16 @@ export default defineConfig({
       symbolId: 'icon-[name]'
     })
   ],
+  css: {
+    //配置全局scss变量
+    preprocessorOptions: {
+      scss: {
+        
+        // 每个 scss 文件会自动注入这段内容
+        additionalData: `@use "@/styles/variables.scss" as *;`
+      }
+    }
+  },
   resolve:{
     alias:{
       "@":path.resolve("./src")  //相对路径别名配置，使用@代替src

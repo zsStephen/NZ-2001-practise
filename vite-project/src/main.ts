@@ -7,6 +7,8 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import App from './App.vue'
 //svg插件配置
 import 'virtual:svg-icons-register'
+//引入全局样式
+import "@/styles/index.scss"
 //获取应用实例对象
 const app = createApp(App)
 //使用插件
