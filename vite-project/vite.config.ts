@@ -1,6 +1,9 @@
 //一般用于配置代理跨域，或者其他配置
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+//引入mock配置插件
+import { viteMockServe } from 'vite-plugin-mock'
+
 //配置路径
 import path from "path"
 //引入svg需要用到的插件
@@ -12,7 +15,11 @@ export default defineConfig({
       //将来需要用到的svg图标放到此路径下
       iconDirs:[path.resolve(process.cwd(),'src/assets/icons')],
       symbolId: 'icon-[name]'
-    })
+    }),
+    viteMockServe({
+      mockPath: 'mock',   // mock 文件放在哪个目录(项目根下的 mock 文件夹)
+      enable: true,       // 是否开启(开发环境)
+    }),
   ],
   css: {
     //配置全局scss变量

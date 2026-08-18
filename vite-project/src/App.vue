@@ -21,7 +21,25 @@
 <script setup lang="ts">
 import { Edit, Delete } from "@element-plus/icons-vue";
 import SvgIcon from "./components/SvgIcon.vue";
-console.log(import.meta.env)
+import request from "./utils/request.ts";
+import { onMounted } from "vue";
+
+
+onMounted(()=>{
+  request({
+    url:"/user",
+    method:"get"
+  }).then(
+    res=>{
+     
+      return console.log("请求成功",res)
+    }
+  )
+})
+
+
+
+// console.log(import.meta.env)
 </script>
 
 <style scoped lang="scss">
